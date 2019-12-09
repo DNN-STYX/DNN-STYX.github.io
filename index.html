@@ -6,40 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> DNN-STYX </title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <div class="content">
-    	<div class="intro">
-    	     <h1 align="center"> STYX </h1>
-            <p>
-                STYX is a general mutation framework to improve the robustness of DNN. The framework is used to improve the DNN’s robustness under different adversarial attacks. We instantiate Styx to image classification DNNs and a set of general pixel-level mutation rules is proposed. We also compared the three different training methods: mutation training, traditional training and adversarial training, showing that our method is effective.
-            </p>
-        </div>
+    <div class="container">
+        <blockquote class="blockquote text-center">
+            <p class="mb-0 h-title">STYX</p>
+        </blockquote>
+        <p class="text-justify h-intro">
+            <i style="font-size:1.5em">STYX</i> is a general mutation framework to improve the robustness of DNN. The framework is used to improve the DNN’s robustness under different adversarial attacks. We instantiate Styx to image classification DNNs and a set of general pixel-level mutation rules is proposed. We also compared the three different training methods: mutation training, traditional training and adversarial training, showing that our method is effective.
+        </p>
         <div class="video">
-            <h2> Video </h2>
-            <p align="center">
-        	  <video src="./video/test.mp4" width="320" height="240" controls="controls">
-            </video>
+            <h2 class="h-subtitle">Video</h2>
+            <center>
+                <video src="./video/test.mp4" width="70%" controls="controls"></video>
+            </center>
         </div>
         <div class="setup">
-            <h2> Setup </h2>
+            <h2 class="h-subtitle">Setup</h2>
             <p style="font-weight: bold;">
-                Environment Requirement
+                Environment Requirement: <code class="highlighter-rouge"><span class="nt">Ubuntu 16.04, CUDA=10.1, cuDNN=7.6, gcc＝4.8</span></code>
             </p>
-                Ubuntu 16.04, CUDA=10.1, cuDNN=7.6, gcc＝4.8 <br /> 
             <p style="font-weight: bold;">
-            	   Python Packages
-            </p> 
-            		tensorflow-gpu=1.13.0, keras, xlrd, pillow, pandas, xlutils, matplotlib
+            	Python Packages: <code class="highlighter-rouge"><span class="nt">tensorflow-gpu=1.13.0, keras, xlrd, pillow, pandas, xlutils, matplotlib</span></code>
+            </p>
         </div>
         <div class="guide">
-            <h2> Get Start with STYX </h2>
-            <p>
-            	   Examples of using STYX can be found in <a href="https://www.baidu.com/"> examples </a> and examples/README.md provides an overview and additional information. It contains a minimal example for each machine learning framework. All examples can be run with the following command: <br />
-                1.asdnas <br />
-                2.adjioiosjioac <br />
-                3.casn<br />
+            <h2 class="h-subtitle">Get Start with STYX</h2>
+            <p class="h-intro">
+                Examples of using STYX can be found in <a href="https://www.baidu.com/"> examples </a> and examples/README.md provides an overview and additional information. It contains a minimal example for each machine learning framework. All examples can be run with the following command: <br />    
             </p>
+            <div class="h-highlight">
+                <pre><span class="pl-v">1.</span>asdnas<br/><span class="pl-v">2.</span>adjioiosjioac<br/><span class="pl-v">3.</span>casn</pre>
+            </div>
         </div>
     </div>
 </body>

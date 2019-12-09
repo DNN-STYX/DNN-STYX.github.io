@@ -73,19 +73,42 @@ textarea {
 }
 /*公共样式--结束*/
 
-.content {
-    
+p a {
+    color: #2f6f9f;
 }
 
-.translateCenter { 
-    width: 80%; 
-    height: 20%; 
-    position: absolute; 
-    left:50%;
-    transform:translate(-50%,0); 
-    background: #2d2d2d;
+.nt {
+    color: #2f6f9f;
+    padding-left: 10px;
 }
 
-.intro {
-    width: 80%;
+.h-title {
+    font-size: 3em;
+}
+
+.h-intro {
+    text-indent: 2em;
+}
+
+.h-subtitle {
+    padding-bottom: .3em;
+    border-bottom: 1px solid #eaecef;
+}
+
+.h-highlight {
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
+
+.pl-v {
+    color: #2f6f9f;
 }
