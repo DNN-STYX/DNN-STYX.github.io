@@ -24,7 +24,7 @@ In more detail, we consider that in three steps:
 ## [](#header-1) (1) model's description
 
 ```
-cd STYX/traditional_training
+cd Tool/traditional_training
 ```
 First we need to provide the model's structure like [**Train\_mnist\_MLP.py**](https://www.baidu.com/)  in the current folder. Currently, we supprot five model types: MLP for MNIST (mnist\_MLP), MLP for Fashion-MNIST (fmnist\_MLP), CNN for MNIST (mnist\_CNN), CNN for Fashion-MNIST (fmnist\_CNN), and CNN for CIFAR-10 (cifar10\_CNN).
 
@@ -35,21 +35,21 @@ Given the paramters like model\_name="mnist\_MLP" and train\_epoch=20. Next we u
 ### [](#header-1) (2.1) traditional_training
 
 ```
-cd STYX/traditional_training
+cd Tool/traditional_training
 python traditional_training.py $model_name $train_epoch
 ```
 
 ### [](#header-1) (2.2) adversarial_training
 
 ```
-cd STYX/adversarial_training
+cd Tool/adversarial_training
 python adversarial_training.py $model_name $train_epoch
 ```
 
 ### [](#header-1) (2.3) STYX
 
 ```
-cd STYX/mutation_training
+cd Tool/STYX
 python mutation_training.py $model_name $train_epoch 
 ```
 
@@ -58,8 +58,8 @@ python mutation_training.py $model_name $train_epoch
 After that, we use the following command to evaluate the models by different attacking method. Take the attacking method "FGM" as example:
 
 ```
-cd STYX/evaluation  
-python evaluation.py ["FGM"]
+cd Tool/evaluation  
+python main_evaluation.py ["FGM"]
 ```
 
 And the evaluation result will be consist of three parts: Accuracy, Robustness, and Time-cost.
