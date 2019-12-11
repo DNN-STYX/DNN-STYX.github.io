@@ -12,12 +12,13 @@ Python Package:
 
 ## [](#header-1)***2. Example***
 
-Examples of using STYX can be found in [**Github Repo**](https://github.com/DNN-STYX/DNN-STYX.github.io/tree/master/demo). It provides an example for training the MLP models w.r.t. MNIST benchmark under three different methods (traditional training, mutation training, and adversarial training) and then making the robustness evaluation. The example can be run with the following command, which takes about 15 mins:
+Examples of using STYX can be found in [**Github Repo**](https://github.com/DNN-STYX/DNN-STYX.github.io/tree/master/demo). It provides an example for training the MLP models w.r.t. MNIST benchmark under three different methods (traditional training, adversarial training, and STYX) and then making the robustness evaluation. The example can be run with the following command, which takes about 20 minutes:
 
 ```
 cd Examples
 bash run_example.sh
 ```
+
 In more detail, we consider that in three steps:
 
 ## [](#header-1) (1) model's description
@@ -25,7 +26,7 @@ In more detail, we consider that in three steps:
 ```
 cd STYX/traditional_training
 ```
-First we need to provide the model's structure like [**Train\_mnist\_MLP.py**](https://www.baidu.com/)  in the current folder. 
+First we need to provide the model's structure like [**Train\_mnist\_MLP.py**](https://www.baidu.com/)  in the current folder. Currently, we supprot five model types: MLP for MNIST (mnist\_MLP), MLP for Fashion-MNIST (fmnist\_MLP), CNN for MNIST (mnist\_CNN), CNN for Fashion-MNIST (fmnist\_CNN), and CNN for CIFAR-10 (cifar10\_CNN).
 
 
 ## [](#header-1) (2) model's generation
@@ -37,18 +38,21 @@ Given the paramters like model\_name="mnist\_MLP" and train\_epoch=20. Next we u
 cd STYX/traditional_training
 python traditional_training.py $model_name $train_epoch
 ```
-### [](#header-1) (2.2) mutation_training
 
-```
-cd STYX/mutation_training
-python mutation_training.py $model_name $train_epoch 
-```
-### [](#header-1) (2.3) adversarial_training
+### [](#header-1) (2.2) adversarial_training
 
 ```
 cd STYX/adversarial_training
 python adversarial_training.py $model_name $train_epoch
 ```
+
+### [](#header-1) (2.3) STYX
+
+```
+cd STYX/mutation_training
+python mutation_training.py $model_name $train_epoch 
+```
+
 
 ## [](#header-1) (3) model's evaluation
 After that, we use the following command to evaluate the models by different attacking method. Take the attacking method "FGM" as example:
@@ -58,4 +62,4 @@ cd STYX/evaluation
 python evaluation.py ["FGM"]
 ```
 
-And the evaluation result is stored in evaluation.xls under evaluation folder.
+And the evaluation result will be consist of three parts: Accuracy, Robustness, and Time-cost.
