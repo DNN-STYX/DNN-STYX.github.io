@@ -8,11 +8,11 @@ The paper work is presented in [**[1]**](https://github.com/DNN-STYX/DNN-STYX.gi
 
 * * *
 
-*   [**Description Video**](install)
+*   [**Description Video**](video)
 
 *   [**Get Start with STYX**](start)
 
-*   [**Experimental Results**](https://github.com/DNN-STYX/DNN-STYX.github.io/tree/master/demo)
+*   [**Experimental Results**](experiment)
 
 * * *
 
