@@ -12,7 +12,7 @@ Python Package:
 
 ## [](#header-1)***2. Example***
 
-Examples of using STYX can be found in [**Github Repo**](https://github.com/DNN-STYX/DNN-STYX.github.io/tree/master/demo). It provides an example for training the MLP models w.r.t. MNIST benchmark under three different methods (traditional training, adversarial training, and STYX) and then making the robustness evaluation. The example can be run with the following command, which takes about 20 minutes:
+Examples of using STYX can be found in [**Github Repo**](https://github.com/DNN-STYX/demo). It provides an example for training the MLP models w.r.t. MNIST benchmark under three different methods (traditional training, adversarial training, and STYX) and then making the robustness evaluation. The example can be run with the following command, which takes about 20 minutes:
 
 ```
 cd Examples
