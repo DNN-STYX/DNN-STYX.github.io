@@ -30,36 +30,36 @@ First we need to provide the model's structure like [**Train\_mnist\_MLP.py**](h
 
 
 ## [](#header-1) (2) model's generation
-Given the paramters like model\_name="mnist\_MLP" and train\_epoch=20. Next we use the following command to generate the models by different training method.
+Given the paramters like data\_type="mnist", model\_type="MLP" and train\_epoch=20. Next we use the following command to generate the models by different training method.
 
 ### [](#header-1) (2.1) traditional_training
 
 ```
 cd Tool/traditional_training
-python traditional_training.py $model_name $train_epoch
+python traditional_training.py <data_type> <model_name> <train_epoch>
 ```
 
 ### [](#header-1) (2.2) adversarial_training
 
 ```
 cd Tool/adversarial_training
-python adversarial_training.py $model_name $train_epoch
+python adversarial_training.py <data_type> <model_name> <train_epoch>
 ```
 
 ### [](#header-1) (2.3) STYX
 
 ```
 cd Tool/STYX
-python mutation_training.py $model_name $train_epoch 
+python styx.py <data_type> <model_name> <train_epoch> 
 ```
 
 
 ## [](#header-1) (3) model's evaluation
-After that, we use the following command to evaluate the models by different attacking method. Take the attacking method "FGM" as example:
+After that, we use the following command to evaluate the models by different attacking method. Take the attacking method "FGM" and the model trained by STYX as example (i.e. attacking_method="FGM", training\_method="STYX"):
 
 ```
 cd Tool/evaluation  
-python main_evaluation.py ["FGM"]
+python main_evaluation.py <data_type> <model_name> <training_method> <attacking_method>
 ```
 
 And the evaluation result will be consist of three parts: Accuracy, Robustness, and Time-cost.
